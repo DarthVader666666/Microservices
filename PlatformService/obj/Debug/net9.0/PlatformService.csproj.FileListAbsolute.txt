@@ -169,3 +169,4 @@ C:\Repos\s4\e3\PlatformService\obj\Debug\net9.0\PlatformService.genruntimeconfig
 C:\Repos\s4\e3\PlatformService\obj\Debug\net9.0\ref\PlatformService.dll
 C:\Repos\s4\e3\platformservice\bin\Debug\net9.0\appsettings.Production.json
 C:\Repos\s4\e3\platformservice\bin\Debug\net9.0\RabbitMQ.Client.dll
+C:\Repos\s4\e3\platformservice\obj\Debug\net9.0\PlatformService.sourcelink.json

@@ -2,7 +2,6 @@ using AutoMapper;
 using CommandsService.Data;
 using CommandsService.Dtos;
 using CommandsService.Models;
-using Microsoft.AspNetCore.DataProtection.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CommandsService.Controllers
@@ -73,7 +72,7 @@ namespace CommandsService.Controllers
             var commandReadDto = _mapper.Map<CommandReadDto>(command);
 
             return CreatedAtRoute(nameof(GetCommandForPlatform), 
-                new { platformId, commandId = commandReadDto.Id });
+                new { platformId, commandId = commandReadDto.Id }, commandReadDto);
         }
     }
 }

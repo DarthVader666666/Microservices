@@ -46,7 +46,7 @@ namespace PlatformService.AsyncDataServices
 
             if(_connection.IsOpen)
             {
-                Console.WriteLine("--> RabbitMQ Connection Open, sebding message...");
+                Console.WriteLine("--> RabbitMQ Connection Open, sending message...");
                 await SendMessage(message);
             }
             else
@@ -62,8 +62,8 @@ namespace PlatformService.AsyncDataServices
             await _channel.BasicPublishAsync<BasicProperties>(
                 exchange: "trigger",
                 routingKey: "",
-                mandatory: true,
-                basicProperties: null,
+                mandatory: false,
+                basicProperties: new BasicProperties { ContentType = "application/json" },
                 body: body
             );
 

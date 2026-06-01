@@ -132,3 +132,6 @@ C:\Repos\s4\e3\CommandsService\obj\Debug\net9.0\refint\CommandsService.dll
 C:\Repos\s4\e3\CommandsService\obj\Debug\net9.0\CommandsService.pdb
 C:\Repos\s4\e3\CommandsService\obj\Debug\net9.0\CommandsService.genruntimeconfig.cache
 C:\Repos\s4\e3\CommandsService\obj\Debug\net9.0\ref\CommandsService.dll
+C:\Repos\s4\e3\commandsservice\obj\Debug\net9.0\CommandsService.sourcelink.json
+C:\Repos\s4\e3\commandsservice\bin\Debug\net9.0\appsetting.Production.json
+C:\Repos\s4\e3\commandsservice\bin\Debug\net9.0\RabbitMQ.Client.dll
