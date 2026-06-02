@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using PlatformService.AsyncDataServices;
 using PlatformService.Data;
+using PlatformService.SyncDataServices.Grpc;
 using PlatformService.SyncDataServices.Http;
 
 namespace PlatformService
@@ -36,6 +37,7 @@ namespace PlatformService
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSingleton<IMessageBusClient, MessageBusClient>();
+            services.AddGrpc();
 
             services.AddSwaggerGen(c =>
                 {
@@ -58,9 +60,16 @@ namespace PlatformService
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();   
+                endpoints.MapControllers();
+                endpoints.MapGrpcService<GrpcPlatformService>();
+
+                endpoints.MapGet("/protos/platforms.proto", async context =>
+                {
+                    await context.Response.WriteAsync(File.ReadAllText("Protos/platforms.proto"));
+                });
             });
 
             PrepDb.PrepPopulation(app, _env.IsProduction());

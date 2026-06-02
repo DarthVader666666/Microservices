@@ -1,6 +1,7 @@
 using CommandsService.AsyncDataServices;
 using CommandsService.Data;
 using CommandsService.EventProcessing;
+using CommandsService.SyncDataServices.Grpc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -22,6 +23,7 @@ namespace CommandsService
             services.AddControllers();
             services.AddSingleton<IEventProcessor, EventProcessor>();
             services.AddHostedService<MessageBusSubscriber>();
+            services.AddScoped<IPlatformDataClient, PlatformDataClient>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen(c =>
@@ -47,6 +49,8 @@ namespace CommandsService
             {
                 endpoints.MapControllers();   
             });
+
+            PreDb.PrepPopulation(app);
         }
     }
 }

@@ -1,11 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "DbWh6rU7E/M=",
+  "dgSpecHash": "lkrlPYfqzgw=",
   "success": true,
   "projectFilePath": "C:\\Repos\\s4\\e3\\commandsservice\\CommandsService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\V.Rumyantsev\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\V.Rumyantsev\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\V.Rumyantsev\\.nuget\\packages\\google.protobuf\\3.35.0\\google.protobuf.3.35.0.nupkg.sha512",
+    "C:\\Users\\V.Rumyantsev\\.nuget\\packages\\grpc.core.api\\2.80.0\\grpc.core.api.2.80.0.nupkg.sha512",
+    "C:\\Users\\V.Rumyantsev\\.nuget\\packages\\grpc.net.client\\2.80.0\\grpc.net.client.2.80.0.nupkg.sha512",
+    "C:\\Users\\V.Rumyantsev\\.nuget\\packages\\grpc.net.common\\2.80.0\\grpc.net.common.2.80.0.nupkg.sha512",
+    "C:\\Users\\V.Rumyantsev\\.nuget\\packages\\grpc.tools\\2.81.0\\grpc.tools.2.81.0.nupkg.sha512",
     "C:\\Users\\V.Rumyantsev\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\V.Rumyantsev\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.8\\microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
     "C:\\Users\\V.Rumyantsev\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
